@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22D21CC359D4C993BAE01BC5 /* Pods_WilliamWhitakersWords_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89C917BBA917AF7DAA71C08 /* Pods_WilliamWhitakersWords_2.framework */; };
 		506BAE0027630973000E5C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506BADFF27630973000E5C4F /* AppDelegate.swift */; };
 		506BAE0227630973000E5C4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506BAE0127630973000E5C4F /* SceneDelegate.swift */; };
 		506BAE0427630973000E5C4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506BAE0327630973000E5C4F /* ViewController.swift */; };
 		506BAE0727630973000E5C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506BAE0527630973000E5C4F /* Main.storyboard */; };
 		506BAE0927630974000E5C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 506BAE0827630974000E5C4F /* Assets.xcassets */; };
 		506BAE0C27630974000E5C4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506BAE0A27630974000E5C4F /* LaunchScreen.storyboard */; };
+		506BAE1727630A66000E5C4F /* SearchBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506BAE1627630A66000E5C4F /* SearchBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34CD206556114EE3C7A94370 /* Pods-WilliamWhitakersWords 2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilliamWhitakersWords 2.debug.xcconfig"; path = "Target Support Files/Pods-WilliamWhitakersWords 2/Pods-WilliamWhitakersWords 2.debug.xcconfig"; sourceTree = "<group>"; };
 		506BADFC27630973000E5C4F /* WilliamWhitakersWords 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WilliamWhitakersWords 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		506BADFF27630973000E5C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		506BAE0127630973000E5C4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		506BAE0827630974000E5C4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		506BAE0B27630974000E5C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		506BAE0D27630974000E5C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		506BAE1627630A66000E5C4F /* SearchBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBrain.swift; sourceTree = "<group>"; };
+		609B0C0FCC74C4392CAE9F7C /* Pods-WilliamWhitakersWords 2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilliamWhitakersWords 2.release.xcconfig"; path = "Target Support Files/Pods-WilliamWhitakersWords 2/Pods-WilliamWhitakersWords 2.release.xcconfig"; sourceTree = "<group>"; };
+		F89C917BBA917AF7DAA71C08 /* Pods_WilliamWhitakersWords_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WilliamWhitakersWords_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D21CC359D4C993BAE01BC5 /* Pods_WilliamWhitakersWords_2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				506BADFE27630973000E5C4F /* WilliamWhitakersWords 2 */,
 				506BADFD27630973000E5C4F /* Products */,
+				7B44DBCA1351C7C2D9CD9AD0 /* Pods */,
+				EC89D51BDE24D58001316036 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +67,55 @@
 			children = (
 				506BADFF27630973000E5C4F /* AppDelegate.swift */,
 				506BAE0127630973000E5C4F /* SceneDelegate.swift */,
-				506BAE0327630973000E5C4F /* ViewController.swift */,
-				506BAE0527630973000E5C4F /* Main.storyboard */,
+				506BAE1327630A14000E5C4F /* Model */,
+				506BAE1427630A29000E5C4F /* View */,
+				506BAE1527630A38000E5C4F /* Controller */,
 				506BAE0827630974000E5C4F /* Assets.xcassets */,
 				506BAE0A27630974000E5C4F /* LaunchScreen.storyboard */,
 				506BAE0D27630974000E5C4F /* Info.plist */,
 			);
 			path = "WilliamWhitakersWords 2";
+			sourceTree = "<group>";
+		};
+		506BAE1327630A14000E5C4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				506BAE1627630A66000E5C4F /* SearchBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		506BAE1427630A29000E5C4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				506BAE0527630973000E5C4F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		506BAE1527630A38000E5C4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				506BAE0327630973000E5C4F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7B44DBCA1351C7C2D9CD9AD0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34CD206556114EE3C7A94370 /* Pods-WilliamWhitakersWords 2.debug.xcconfig */,
+				609B0C0FCC74C4392CAE9F7C /* Pods-WilliamWhitakersWords 2.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EC89D51BDE24D58001316036 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F89C917BBA917AF7DAA71C08 /* Pods_WilliamWhitakersWords_2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 506BAE1027630974000E5C4F /* Build configuration list for PBXNativeTarget "WilliamWhitakersWords 2" */;
 			buildPhases = (
+				FA38430078D3BCA77DB9BAE5 /* [CP] Check Pods Manifest.lock */,
 				506BADF827630973000E5C4F /* Sources */,
 				506BADF927630973000E5C4F /* Frameworks */,
 				506BADFA27630973000E5C4F /* Resources */,
+				75174465202BB576DAECAA7D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +186,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		75174465202BB576DAECAA7D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WilliamWhitakersWords 2/Pods-WilliamWhitakersWords 2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WilliamWhitakersWords 2/Pods-WilliamWhitakersWords 2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WilliamWhitakersWords 2/Pods-WilliamWhitakersWords 2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA38430078D3BCA77DB9BAE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WilliamWhitakersWords 2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		506BADF827630973000E5C4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +235,7 @@
 			files = (
 				506BAE0427630973000E5C4F /* ViewController.swift in Sources */,
 				506BAE0027630973000E5C4F /* AppDelegate.swift in Sources */,
+				506BAE1727630A66000E5C4F /* SearchBrain.swift in Sources */,
 				506BAE0227630973000E5C4F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +380,7 @@
 		};
 		506BAE1127630974000E5C4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34CD206556114EE3C7A94370 /* Pods-WilliamWhitakersWords 2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +408,7 @@
 		};
 		506BAE1227630974000E5C4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 609B0C0FCC74C4392CAE9F7C /* Pods-WilliamWhitakersWords 2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
