@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var englishTextField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
     
+    var contents: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
@@ -29,7 +31,7 @@ class ViewController: UIViewController {
         messageLabel.text = ""
 
         if latinTextField.text != "" {
-            let contents = SearchBrain.getHTML(search: latinTextField.text!, type: "latin")
+            contents = SearchBrain.getHTML(search: latinTextField.text!, type: "latin")
             print(contents)
             performSegue(withIdentifier: "searchSegue", sender: self)
         } else {
@@ -49,10 +51,15 @@ class ViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! SearchViewController
+        destinationVC.searchLabelText = contents
+    }
+    
 }
 
 extension UIViewController {
-    // Puts the keyboard away if the user taps outside of the texbox
+    // Puts the keyboard away if the user taps outside of the textbox
     func hideKeyboardWhenTappedAround() {
         let tapGesture = UITapGestureRecognizer(target: self,
                          action: #selector(hideKeyboard))

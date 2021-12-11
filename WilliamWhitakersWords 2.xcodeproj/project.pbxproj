@@ -15,6 +15,7 @@
 		506BAE0927630974000E5C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 506BAE0827630974000E5C4F /* Assets.xcassets */; };
 		506BAE0C27630974000E5C4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506BAE0A27630974000E5C4F /* LaunchScreen.storyboard */; };
 		506BAE1727630A66000E5C4F /* SearchBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506BAE1627630A66000E5C4F /* SearchBrain.swift */; };
+		506BAE1B27646943000E5C4F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506BAE1A27646943000E5C4F /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		506BAE0B27630974000E5C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		506BAE0D27630974000E5C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		506BAE1627630A66000E5C4F /* SearchBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBrain.swift; sourceTree = "<group>"; };
+		506BAE1A27646943000E5C4F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		609B0C0FCC74C4392CAE9F7C /* Pods-WilliamWhitakersWords 2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilliamWhitakersWords 2.release.xcconfig"; path = "Target Support Files/Pods-WilliamWhitakersWords 2/Pods-WilliamWhitakersWords 2.release.xcconfig"; sourceTree = "<group>"; };
 		F89C917BBA917AF7DAA71C08 /* Pods_WilliamWhitakersWords_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WilliamWhitakersWords_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				506BAE0327630973000E5C4F /* ViewController.swift */,
+				506BAE1A27646943000E5C4F /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				506BAE1B27646943000E5C4F /* SearchViewController.swift in Sources */,
 				506BAE0427630973000E5C4F /* ViewController.swift in Sources */,
 				506BAE0027630973000E5C4F /* AppDelegate.swift in Sources */,
 				506BAE1727630A66000E5C4F /* SearchBrain.swift in Sources */,
