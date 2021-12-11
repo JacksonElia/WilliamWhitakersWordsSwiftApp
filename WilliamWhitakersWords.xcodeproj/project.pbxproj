@@ -49,7 +49,7 @@
 		506BADF327630973000E5C4F = {
 			isa = PBXGroup;
 			children = (
-				506BADFE27630973000E5C4F /* WilliamWhitakersWords 2 */,
+				506BADFE27630973000E5C4F /* WilliamWhitakersWords */,
 				506BADFD27630973000E5C4F /* Products */,
 				7B44DBCA1351C7C2D9CD9AD0 /* Pods */,
 				EC89D51BDE24D58001316036 /* Frameworks */,
@@ -64,7 +64,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		506BADFE27630973000E5C4F /* WilliamWhitakersWords 2 */ = {
+		506BADFE27630973000E5C4F /* WilliamWhitakersWords */ = {
 			isa = PBXGroup;
 			children = (
 				506BADFF27630973000E5C4F /* AppDelegate.swift */,
@@ -76,7 +76,7 @@
 				506BAE0A27630974000E5C4F /* LaunchScreen.storyboard */,
 				506BAE0D27630974000E5C4F /* Info.plist */,
 			);
-			path = "WilliamWhitakersWords 2";
+			path = WilliamWhitakersWords;
 			sourceTree = "<group>";
 		};
 		506BAE1327630A14000E5C4F /* Model */ = {
@@ -158,7 +158,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 506BADF727630973000E5C4F /* Build configuration list for PBXProject "WilliamWhitakersWords 2" */;
+			buildConfigurationList = 506BADF727630973000E5C4F /* Build configuration list for PBXProject "WilliamWhitakersWords" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -441,7 +441,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		506BADF727630973000E5C4F /* Build configuration list for PBXProject "WilliamWhitakersWords 2" */ = {
+		506BADF727630973000E5C4F /* Build configuration list for PBXProject "WilliamWhitakersWords" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				506BAE0E27630974000E5C4F /* Debug */,
