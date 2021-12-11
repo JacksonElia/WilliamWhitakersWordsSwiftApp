@@ -43,9 +43,10 @@ class ViewController: UIViewController {
         view.endEditing(true)
         messageLabel.text = ""
 
-        if latinTextField.text != "" {
-            let contents = SearchBrain.getHTML(search: englishTextField.text!, type: "english")
+        if englishTextField.text != "" {
+            contents = SearchBrain.getHTML(search: englishTextField.text!, type: "english")
             print(contents)
+            performSegue(withIdentifier: "searchSegue", sender: self)
         } else {
             messageLabel.text = "Type Something!"
         }

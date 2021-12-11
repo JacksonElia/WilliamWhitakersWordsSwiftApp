@@ -49,7 +49,7 @@
 		506BADF327630973000E5C4F = {
 			isa = PBXGroup;
 			children = (
-				506BADFE27630973000E5C4F /* WilliamWhitakersWords */,
+				506BADFE27630973000E5C4F /* WilliamWhitakersWords 2 */,
 				506BADFD27630973000E5C4F /* Products */,
 				7B44DBCA1351C7C2D9CD9AD0 /* Pods */,
 				EC89D51BDE24D58001316036 /* Frameworks */,
@@ -64,7 +64,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		506BADFE27630973000E5C4F /* WilliamWhitakersWords */ = {
+		506BADFE27630973000E5C4F /* WilliamWhitakersWords 2 */ = {
 			isa = PBXGroup;
 			children = (
 				506BADFF27630973000E5C4F /* AppDelegate.swift */,
@@ -76,7 +76,7 @@
 				506BAE0A27630974000E5C4F /* LaunchScreen.storyboard */,
 				506BAE0D27630974000E5C4F /* Info.plist */,
 			);
-			path = WilliamWhitakersWords;
+			path = "WilliamWhitakersWords 2";
 			sourceTree = "<group>";
 		};
 		506BAE1327630A14000E5C4F /* Model */ = {

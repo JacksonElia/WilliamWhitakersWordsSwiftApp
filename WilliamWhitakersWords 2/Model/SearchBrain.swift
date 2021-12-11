@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSoup
 
 struct SearchBrain {
     static func getHTML(search: String, type: String) -> String {
@@ -21,9 +22,13 @@ struct SearchBrain {
         
         if let url = URL(string: urlString) {
             do {
-                let contents = try String(contentsOf: url)
-                print(contents)
-                return contents
+                // Gets html from WWW
+                let html = try String(contentsOf: url)
+                // Parses HTML into SwiftSoup Document
+                let parsedHTMLDoc: Document = try SwiftSoup.parse(html)
+                // Gets the text from WWW
+                let docText: Element = try parsedHTMLDoc.select("pre").first()!
+                return try docText.text()
             } catch {
                 print("William Whitakers is probably down")
                 return "William Whitakers is down"
