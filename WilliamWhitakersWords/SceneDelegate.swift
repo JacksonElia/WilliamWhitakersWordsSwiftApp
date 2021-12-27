@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  WilliamWhitakersWords 2
+//  WilliamWhitakersWords
 //
 //  Created by Jack Elia on 12/9/21.
 //

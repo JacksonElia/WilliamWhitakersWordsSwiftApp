@@ -1,6 +1,6 @@
 //
 //  SearchViewController.swift
-//  WilliamWhitakersWords 2
+//  WilliamWhitakersWords
 //
 //  Created by Jack Elia on 12/11/21.
 //
