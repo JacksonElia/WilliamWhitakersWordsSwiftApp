@@ -53,8 +53,10 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! SearchViewController
-        destinationVC.searchLabelText = contents
+        if segue.identifier == "searchSegue" {
+            let destinationVC = segue.destination as! SearchViewController
+            destinationVC.searchLabelText = contents
+        }
     }
     
 }

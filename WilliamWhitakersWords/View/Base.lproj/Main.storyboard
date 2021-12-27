@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="LP0-eX-Ltj">
             <objects>
-                <viewController id="yjk-Zw-dxy" customClass="ViewController" customModule="WilliamWhitakersWords_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yjk-Zw-dxy" customClass="ViewController" customModule="WilliamWhitakersWords" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="emf-Lv-zLm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,33 +23,44 @@
                                     <constraint firstAttribute="height" constant="44" id="coR-jQ-Z8k"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" width="80" id="g95-O3-eP0">
+                                    <barButtonItem title="Item" width="80" id="g95-O3-eP0" userLabel="Info Button">
                                         <imageReference key="image" image="info.circle.fill" catalog="system" symbolScale="large"/>
                                         <color key="tintColor" systemColor="labelColor"/>
+                                        <connections>
+                                            <segue destination="4Lw-LI-dag" kind="popoverPresentation" popoverAnchorBarButtonItem="g95-O3-eP0" id="yFI-dP-5MU">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="khd-sb-z5H"/>
-                                    <barButtonItem title="Item" id="vJa-Tv-V11">
+                                    <barButtonItem title="Item" id="vJa-Tv-V11" userLabel="Favorites Button">
                                         <imageReference key="image" image="star.fill" catalog="system" symbolScale="large"/>
                                         <color key="tintColor" systemColor="labelColor"/>
+                                        <connections>
+                                            <segue destination="Kwf-r3-LSf" kind="show" id="bqH-7i-IYC"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="oJ0-sZ-Uwa"/>
-                                    <barButtonItem title="Item" width="80" id="Qkx-sm-3RU">
+                                    <barButtonItem title="Item" width="80" id="Qkx-sm-3RU" userLabel="Settings Button">
                                         <imageReference key="image" image="gearshape.fill" catalog="system" symbolScale="large"/>
                                         <color key="tintColor" systemColor="labelColor"/>
+                                        <connections>
+                                            <segue destination="3l3-lV-mnk" kind="show" id="3ak-jr-Qp2"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3D5-ZG-TbU">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="728"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="William Whitaker's Words" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="S2y-VF-1EC">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="193.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="182"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="771-kZ-TXa">
-                                        <rect key="frame" x="0.0" y="193.5" width="414" height="193.5"/>
+                                        <rect key="frame" x="0.0" y="182" width="414" height="182"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zb-dM-D94">
                                                 <rect key="frame" x="80" y="20" width="254" height="40"/>
@@ -89,7 +100,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGJ-HN-cHS">
-                                        <rect key="frame" x="0.0" y="387" width="414" height="193.5"/>
+                                        <rect key="frame" x="0.0" y="364" width="414" height="182"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBP-jM-Tiq">
                                                 <rect key="frame" x="80" y="20" width="254" height="40"/>
@@ -128,7 +139,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pwt-8d-YjL">
-                                        <rect key="frame" x="0.0" y="580.5" width="414" height="193.5"/>
+                                        <rect key="frame" x="0.0" y="546" width="414" height="182"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -142,10 +153,10 @@
                             <constraint firstItem="3D5-ZG-TbU" firstAttribute="top" secondItem="EYX-T5-fh9" secondAttribute="top" id="0zv-lf-eXx"/>
                             <constraint firstItem="3D5-ZG-TbU" firstAttribute="leading" secondItem="EYX-T5-fh9" secondAttribute="leading" id="2Cy-6A-AAp"/>
                             <constraint firstAttribute="trailing" secondItem="3D5-ZG-TbU" secondAttribute="trailing" id="NFW-En-Srz"/>
+                            <constraint firstAttribute="bottom" secondItem="3D5-ZG-TbU" secondAttribute="bottom" constant="80" id="NMK-5y-7zA"/>
                             <constraint firstItem="IEa-OV-SO5" firstAttribute="bottom" secondItem="EYX-T5-fh9" secondAttribute="bottom" id="X3I-Y0-SiV"/>
                             <constraint firstItem="IEa-OV-SO5" firstAttribute="trailing" secondItem="3D5-ZG-TbU" secondAttribute="trailing" id="jfe-7o-H3T"/>
                             <constraint firstItem="IEa-OV-SO5" firstAttribute="leading" secondItem="3D5-ZG-TbU" secondAttribute="leading" id="kAn-JW-w6T"/>
-                            <constraint firstItem="EYX-T5-fh9" firstAttribute="bottom" secondItem="3D5-ZG-TbU" secondAttribute="bottom" id="rvb-pB-aQ1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nqw-Tr-WZX"/>
@@ -162,10 +173,129 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="75"/>
         </scene>
+        <!--Info View Controller-->
+        <scene sceneID="jag-Se-m4w">
+            <objects>
+                <viewController id="4Lw-LI-dag" customClass="InfoViewController" customModule="WilliamWhitakersWords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2aQ-BA-0l7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRU-Iv-YRF">
+                                <rect key="frame" x="10" y="60" width="394" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="yHB-3k-8ik"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="top" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="YXp-41-QFL">
+                                <rect key="frame" x="0.0" y="122" width="414" height="686"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzI-r7-nMM">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="App made by Jackson Elia. Check out my Github" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WMQ-aE-RaF">
+                                                <rect key="frame" x="0.0" y="10" width="414" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="wyp-Lf-2CF"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="WMQ-aE-RaF" secondAttribute="trailing" id="0Ip-kU-Xbc"/>
+                                            <constraint firstItem="WMQ-aE-RaF" firstAttribute="centerX" secondItem="PzI-r7-nMM" secondAttribute="centerX" id="7Pa-Oz-62W"/>
+                                            <constraint firstItem="WMQ-aE-RaF" firstAttribute="leading" secondItem="PzI-r7-nMM" secondAttribute="leading" id="7d7-fP-EZs"/>
+                                            <constraint firstAttribute="height" constant="110" id="8XV-Kr-fve"/>
+                                            <constraint firstAttribute="bottom" secondItem="WMQ-aE-RaF" secondAttribute="bottom" id="Jum-Pa-9ao"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dso-JX-cMF">
+                                        <rect key="frame" x="0.0" y="123" width="414" height="110"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Powered by the website William Whitaker's Words" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wzl-pJ-YML">
+                                                <rect key="frame" x="0.0" y="10" width="414" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="m5u-OH-imR"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="BWm-DU-jYb"/>
+                                            <constraint firstItem="Wzl-pJ-YML" firstAttribute="leading" secondItem="Dso-JX-cMF" secondAttribute="leading" id="BjL-QC-UMd"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wzl-pJ-YML" secondAttribute="trailing" id="esv-96-JkT"/>
+                                            <constraint firstItem="Wzl-pJ-YML" firstAttribute="top" secondItem="Dso-JX-cMF" secondAttribute="top" constant="10" id="mJW-Ka-g30"/>
+                                            <constraint firstItem="Wzl-pJ-YML" firstAttribute="centerX" secondItem="Dso-JX-cMF" secondAttribute="centerX" id="p90-8o-0YZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8C1-Jd-rzo">
+                                        <rect key="frame" x="0.0" y="246" width="414" height="440"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a Junior in high school who loves Latin and wanted to try my hand at making a nice app for William Whitakers Words." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TV-bD-fND">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="488"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="1TV-bD-fND" firstAttribute="leading" secondItem="8C1-Jd-rzo" secondAttribute="leading" id="2m8-zG-cqw"/>
+                                            <constraint firstAttribute="bottom" secondItem="1TV-bD-fND" secondAttribute="bottom" constant="-48" id="USF-CY-bbd"/>
+                                            <constraint firstItem="1TV-bD-fND" firstAttribute="centerX" secondItem="8C1-Jd-rzo" secondAttribute="centerX" id="th6-e9-fw6"/>
+                                            <constraint firstItem="1TV-bD-fND" firstAttribute="top" secondItem="8C1-Jd-rzo" secondAttribute="top" id="xZj-7z-8eJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8C1-Jd-rzo" firstAttribute="trailing" secondItem="Dso-JX-cMF" secondAttribute="trailing" id="92E-Dc-QFD"/>
+                                    <constraint firstItem="PzI-r7-nMM" firstAttribute="trailing" secondItem="Dso-JX-cMF" secondAttribute="trailing" id="Fqf-OQ-eR2"/>
+                                    <constraint firstItem="PzI-r7-nMM" firstAttribute="trailing" secondItem="YXp-41-QFL" secondAttribute="trailingMargin" id="Ilj-5d-MqR"/>
+                                    <constraint firstItem="Dso-JX-cMF" firstAttribute="top" secondItem="PzI-r7-nMM" secondAttribute="bottom" constant="13" id="ZvB-7F-zcb"/>
+                                    <constraint firstItem="Dso-JX-cMF" firstAttribute="top" secondItem="PzI-r7-nMM" secondAttribute="bottom" constant="13" id="mEA-b8-Dq3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Slj-4k-L34"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rRU-Iv-YRF" firstAttribute="centerX" secondItem="2aQ-BA-0l7" secondAttribute="centerX" id="CIT-fV-USR"/>
+                            <constraint firstItem="rRU-Iv-YRF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Slj-4k-L34" secondAttribute="leading" id="J8S-46-d8U"/>
+                            <constraint firstItem="Slj-4k-L34" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rRU-Iv-YRF" secondAttribute="trailing" id="VMf-SI-DoF"/>
+                            <constraint firstItem="YXp-41-QFL" firstAttribute="leading" secondItem="Slj-4k-L34" secondAttribute="leading" id="Xt4-3L-ZLd"/>
+                            <constraint firstItem="rRU-Iv-YRF" firstAttribute="top" secondItem="Slj-4k-L34" secondAttribute="top" constant="60" id="fIr-fl-W6h"/>
+                            <constraint firstAttribute="trailing" secondItem="YXp-41-QFL" secondAttribute="trailing" id="fgz-ht-3PN"/>
+                            <constraint firstItem="YXp-41-QFL" firstAttribute="top" secondItem="rRU-Iv-YRF" secondAttribute="bottom" constant="10" id="g2G-7Z-kqV"/>
+                            <constraint firstItem="YXp-41-QFL" firstAttribute="bottom" secondItem="Slj-4k-L34" secondAttribute="bottom" id="mPe-6h-YZ0"/>
+                            <constraint firstItem="rRU-Iv-YRF" firstAttribute="leading" secondItem="Slj-4k-L34" secondAttribute="leading" constant="10" id="mhB-rd-7WQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="githubTextView" destination="WMQ-aE-RaF" id="Yqn-3x-4gt"/>
+                        <outlet property="wwwTextView" destination="Wzl-pJ-YML" id="EVc-qa-zua"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZvQ-6p-gqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298.55072463768118" y="762.72321428571422"/>
+        </scene>
         <!--Search View Controller-->
         <scene sceneID="K4F-Xx-V7p">
             <objects>
-                <viewController id="2Se-wQ-Jnu" customClass="SearchViewController" customModule="WilliamWhitakersWords_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Se-wQ-Jnu" customClass="SearchViewController" customModule="WilliamWhitakersWords" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oxb-4T-KmC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,7 +358,39 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EI9-Jz-q9g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="75"/>
+            <point key="canvasLocation" x="-349" y="75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jEd-hK-8OD">
+            <objects>
+                <viewController id="3l3-lV-mnk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FXF-0r-Dg4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="em9-ye-uF9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="62f-5u-g1Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omY-ET-HWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1557" y="763"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="V3H-Yz-OVW">
+            <objects>
+                <viewController id="Kwf-r3-LSf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LPJ-Om-Jhf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vX9-Az-yEZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ET9-kK-wOV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BP7-7T-Apx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="763"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="labelColor"/>
