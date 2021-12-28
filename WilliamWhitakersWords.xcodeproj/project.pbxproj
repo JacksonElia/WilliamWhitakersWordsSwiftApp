@@ -18,7 +18,6 @@
 		506BAE1B27646943000E5C4F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506BAE1A27646943000E5C4F /* SearchViewController.swift */; };
 		50C7971727798F9900CB46B8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C7971627798F9900CB46B8 /* InfoViewController.swift */; };
 		50C7971927798FB500CB46B8 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C7971827798FB500CB46B8 /* FavoritesViewController.swift */; };
-		50C7971B27798FC400CB46B8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C7971A27798FC400CB46B8 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		506BAE1A27646943000E5C4F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		50C7971627798F9900CB46B8 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		50C7971827798FB500CB46B8 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		50C7971A27798FC400CB46B8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		609B0C0FCC74C4392CAE9F7C /* Pods-WilliamWhitakersWords 2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilliamWhitakersWords 2.release.xcconfig"; path = "Target Support Files/Pods-WilliamWhitakersWords 2/Pods-WilliamWhitakersWords 2.release.xcconfig"; sourceTree = "<group>"; };
 		F89C917BBA917AF7DAA71C08 /* Pods_WilliamWhitakersWords_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WilliamWhitakersWords_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -108,7 +106,6 @@
 				506BAE1A27646943000E5C4F /* SearchViewController.swift */,
 				50C7971627798F9900CB46B8 /* InfoViewController.swift */,
 				50C7971827798FB500CB46B8 /* FavoritesViewController.swift */,
-				50C7971A27798FC400CB46B8 /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -252,7 +249,6 @@
 				506BAE1727630A66000E5C4F /* SearchBrain.swift in Sources */,
 				50C7971727798F9900CB46B8 /* InfoViewController.swift in Sources */,
 				506BAE0227630973000E5C4F /* SceneDelegate.swift in Sources */,
-				50C7971B27798FC400CB46B8 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

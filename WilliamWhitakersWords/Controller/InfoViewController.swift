@@ -12,10 +12,17 @@ class InfoViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var githubTextView: UITextView!
     @IBOutlet weak var wwwTextView: UITextView!
     
+    var nightmodeOn: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hyperlinkTextView(textView: githubTextView, subText: "Github", link: "https://github.com/Traptricker")
         hyperlinkTextView(textView: wwwTextView, subText: "William Whitaker's Words", link: "https://archives.nd.edu/words.html")
+        if nightmodeOn {
+            overrideUserInterfaceStyle = .dark
+        } else {
+            overrideUserInterfaceStyle = .light
+        }
     }
     
     func hyperlinkTextView(textView: UITextView, subText: String, link: String) {
@@ -25,10 +32,13 @@ class InfoViewController: UIViewController, UITextViewDelegate {
         let subtextRange = NSString(string: textView.text).range(of: subText)
         attributedString.addAttribute(.link, value: link, range: subtextRange)
         let font = textView.font
+        let textColor = textView.textColor
         textView.attributedText = attributedString
         textView.font = font
+        textView.textColor = textColor
         textView.linkTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.link]
         textView.textContainer.lineBreakMode = NSLineBreakMode.byWordWrapping
         textView.textAlignment = .center
     }
+    
 }

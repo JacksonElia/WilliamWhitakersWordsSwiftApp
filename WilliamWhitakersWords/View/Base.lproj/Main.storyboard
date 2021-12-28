@@ -27,7 +27,7 @@
                                         <imageReference key="image" image="info.circle.fill" catalog="system" symbolScale="large"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <connections>
-                                            <segue destination="4Lw-LI-dag" kind="popoverPresentation" popoverAnchorBarButtonItem="g95-O3-eP0" id="yFI-dP-5MU">
+                                            <segue destination="4Lw-LI-dag" kind="popoverPresentation" identifier="infoSegue" popoverAnchorBarButtonItem="g95-O3-eP0" id="yFI-dP-5MU">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
                                         </connections>
@@ -37,15 +37,15 @@
                                         <imageReference key="image" image="star.fill" catalog="system" symbolScale="large"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <connections>
-                                            <segue destination="Kwf-r3-LSf" kind="show" id="bqH-7i-IYC"/>
+                                            <segue destination="Kwf-r3-LSf" kind="show" identifier="favoritesSegue" id="bqH-7i-IYC"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="oJ0-sZ-Uwa"/>
-                                    <barButtonItem title="Item" width="80" id="Qkx-sm-3RU" userLabel="Settings Button">
-                                        <imageReference key="image" image="gearshape.fill" catalog="system" symbolScale="large"/>
+                                    <barButtonItem title="Item" width="80" id="Qkx-sm-3RU" userLabel="Nightmode Button">
+                                        <imageReference key="image" image="moon.fill" catalog="system" symbolScale="large"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <connections>
-                                            <segue destination="3l3-lV-mnk" kind="show" id="3ak-jr-Qp2"/>
+                                            <action selector="nightmodeButtonPressed:" destination="yjk-Zw-dxy" id="Ip5-Ni-x49"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -166,6 +166,7 @@
                         <outlet property="latinButton" destination="0Zb-dM-D94" id="8sB-ZO-yva"/>
                         <outlet property="latinTextField" destination="chK-T6-CdX" id="g8o-VR-lUw"/>
                         <outlet property="messageLabel" destination="pwt-8d-YjL" id="Fbr-ch-pCK"/>
+                        <outlet property="nightmodeButton" destination="Qkx-sm-3RU" id="7oC-xp-X9n"/>
                         <segue destination="2Se-wQ-Jnu" kind="show" identifier="searchSegue" id="jjb-Gd-ZEL"/>
                     </connections>
                 </viewController>
@@ -360,26 +361,10 @@
             </objects>
             <point key="canvasLocation" x="-349" y="75"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="jEd-hK-8OD">
-            <objects>
-                <viewController id="3l3-lV-mnk" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FXF-0r-Dg4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="em9-ye-uF9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="62f-5u-g1Z"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="omY-ET-HWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1557" y="763"/>
-        </scene>
-        <!--View Controller-->
+        <!--Favorites View Controller-->
         <scene sceneID="V3H-Yz-OVW">
             <objects>
-                <viewController id="Kwf-r3-LSf" sceneMemberID="viewController">
+                <viewController id="Kwf-r3-LSf" customClass="FavoritesViewController" customModule="WilliamWhitakersWords" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LPJ-Om-Jhf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -393,10 +378,10 @@
             <point key="canvasLocation" x="929" y="763"/>
         </scene>
     </scenes>
-    <color key="tintColor" systemColor="labelColor"/>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="moon.fill" catalog="system" width="128" height="121"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

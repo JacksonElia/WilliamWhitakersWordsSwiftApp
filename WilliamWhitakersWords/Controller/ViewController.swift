@@ -14,8 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var latinTextField: UITextField!
     @IBOutlet weak var englishTextField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var nightmodeButton: UIBarButtonItem!
     
     var contents: String = ""
+    var nightmodeOn: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,12 @@ class ViewController: UIViewController {
         latinTextField.autocorrectionType = .no
         latinButton.layer.cornerRadius = 5
         englishButton.layer.cornerRadius = 5
+        nightmodeOn = traitCollection.userInterfaceStyle == .dark
+        if nightmodeOn {
+            nightmodeButton.image = UIImage(systemName: "moon.fill")
+        } else {
+            nightmodeButton.image = UIImage(systemName: "moon")
+        }
     }
     
     @IBAction func latinButtonPressed(_ sender: UIButton) {
@@ -52,10 +60,32 @@ class ViewController: UIViewController {
         }
     }
     
+    var buttonPressed = false
+    @IBAction func nightmodeButtonPressed(_ sender: UIBarButtonItem) {
+        nightmodeOn = !nightmodeOn
+        if nightmodeOn {
+            nightmodeButton.image = UIImage(systemName: "moon.fill")
+            overrideUserInterfaceStyle = .dark
+            self.navigationController?.navigationBar.tintColor = UIColor.white
+        } else {
+            nightmodeButton.image = UIImage(systemName: "moon")
+            overrideUserInterfaceStyle = .light
+            self.navigationController?.navigationBar.tintColor = UIColor.black
+        }
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "searchSegue" {
             let destinationVC = segue.destination as! SearchViewController
             destinationVC.searchLabelText = contents
+            destinationVC.nightmodeOn = nightmodeOn
+        } else if segue.identifier == "infoSegue" {
+            let destinationVC = segue.destination as! InfoViewController
+            destinationVC.nightmodeOn = nightmodeOn
+        } else if segue.identifier == "favoritesSegue" {
+            let destinationVC = segue.destination as! FavoritesViewController
+            destinationVC.nightmodeOn = nightmodeOn
         }
     }
     
