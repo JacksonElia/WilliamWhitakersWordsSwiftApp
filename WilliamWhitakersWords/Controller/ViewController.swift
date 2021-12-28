@@ -16,8 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var nightmodeButton: UIBarButtonItem!
     
-    var contents: String = ""
-    var nightmodeOn: Bool = false
+    var contents = ""
+    var search = ""
+    var searchType = ""
+    var nightmodeOn = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +28,13 @@ class ViewController: UIViewController {
         latinButton.layer.cornerRadius = 5
         englishButton.layer.cornerRadius = 5
         nightmodeOn = traitCollection.userInterfaceStyle == .dark
+        // Turns nightmode on or off based on what the user selected
         if nightmodeOn {
             nightmodeButton.image = UIImage(systemName: "moon.fill")
+            self.navigationController?.navigationBar.tintColor = UIColor.white
         } else {
             nightmodeButton.image = UIImage(systemName: "moon")
+            self.navigationController?.navigationBar.tintColor = UIColor.black
         }
     }
     
@@ -39,8 +44,9 @@ class ViewController: UIViewController {
         messageLabel.text = ""
 
         if latinTextField.text != "" {
-            contents = SearchBrain.getHTML(search: latinTextField.text!, type: "latin")
-            print(contents)
+            search = latinTextField.text!
+            contents = SearchBrain.getHTML(search: search, type: "latin")
+            searchType = "latin"
             performSegue(withIdentifier: "searchSegue", sender: self)
         } else {
             messageLabel.text = "Type Something!"
@@ -52,14 +58,16 @@ class ViewController: UIViewController {
         messageLabel.text = ""
 
         if englishTextField.text != "" {
-            contents = SearchBrain.getHTML(search: englishTextField.text!, type: "english")
-            print(contents)
+            search = englishTextField.text!
+            contents = SearchBrain.getHTML(search: search, type: "english")
+            searchType = "english"
             performSegue(withIdentifier: "searchSegue", sender: self)
         } else {
             messageLabel.text = "Type Something!"
         }
     }
     
+    // Changes the nightmode button's appearance and the interface's appearance to light or dark
     var buttonPressed = false
     @IBAction func nightmodeButtonPressed(_ sender: UIBarButtonItem) {
         nightmodeOn = !nightmodeOn
@@ -74,11 +82,12 @@ class ViewController: UIViewController {
         }
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "searchSegue" {
             let destinationVC = segue.destination as! SearchViewController
             destinationVC.searchLabelText = contents
+            destinationVC.search = search
+            destinationVC.searchType = searchType
             destinationVC.nightmodeOn = nightmodeOn
         } else if segue.identifier == "infoSegue" {
             let destinationVC = segue.destination as! InfoViewController

@@ -35,7 +35,7 @@ struct SearchBrain {
             }
         } else {
             print("The URL was bad, make sure it works.")
-            return "I messed up the coding. 🤦"
+            return "Please use valid characters"
         }
     }
 }

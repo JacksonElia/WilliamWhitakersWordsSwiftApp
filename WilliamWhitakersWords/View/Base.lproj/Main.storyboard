@@ -334,8 +334,15 @@
                             <constraint firstItem="ShQ-Eg-CSy" firstAttribute="bottom" secondItem="sxd-5B-pwc" secondAttribute="bottom" id="wK6-TL-4z0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="13D-NA-GZM"/>
+                    <navigationItem key="navigationItem" id="13D-NA-GZM">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="star" catalog="system" id="Sn1-MT-klZ">
+                            <connections>
+                                <action selector="favoriteButtonPressed:" destination="2Se-wQ-Jnu" id="QzM-mP-Tbx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="favoriteButton" destination="Sn1-MT-klZ" id="hq5-g3-xk6"/>
                         <outlet property="searchLabel" destination="Fg9-92-Ucw" id="ZRi-qP-Y0a"/>
                     </connections>
                 </viewController>
@@ -368,20 +375,62 @@
                     <view key="view" contentMode="scaleToFill" id="LPJ-Om-Jhf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Fa6-7l-dHq">
+                                <rect key="frame" x="0.0" y="160" width="414" height="702"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QY0-63-Pt6">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QY0-63-Pt6" id="qhp-Df-esV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorited Searches" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="utF-Ra-6Hu">
+                                <rect key="frame" x="10" y="98" width="394" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="BnM-xG-FXh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vX9-Az-yEZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vX9-Az-yEZ" firstAttribute="trailing" secondItem="Fa6-7l-dHq" secondAttribute="trailing" id="2xj-sT-Of0"/>
+                            <constraint firstItem="vX9-Az-yEZ" firstAttribute="trailing" secondItem="utF-Ra-6Hu" secondAttribute="trailing" constant="10" id="3s1-67-AKK"/>
+                            <constraint firstItem="vX9-Az-yEZ" firstAttribute="bottom" secondItem="Fa6-7l-dHq" secondAttribute="bottom" id="5Ir-US-X1d"/>
+                            <constraint firstItem="utF-Ra-6Hu" firstAttribute="leading" secondItem="vX9-Az-yEZ" secondAttribute="leading" constant="10" id="k2w-4z-7u3"/>
+                            <constraint firstItem="Fa6-7l-dHq" firstAttribute="top" secondItem="utF-Ra-6Hu" secondAttribute="bottom" constant="10" id="laW-oI-bU9"/>
+                            <constraint firstItem="utF-Ra-6Hu" firstAttribute="top" secondItem="vX9-Az-yEZ" secondAttribute="top" constant="10" id="tqt-mU-4lf"/>
+                            <constraint firstItem="Fa6-7l-dHq" firstAttribute="leading" secondItem="vX9-Az-yEZ" secondAttribute="leading" id="xKB-bN-pJm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ET9-kK-wOV"/>
+                    <connections>
+                        <outlet property="favoritesTableView" destination="Fa6-7l-dHq" id="MN4-xO-31I"/>
+                        <segue destination="2Se-wQ-Jnu" kind="show" identifier="favoritesSearchSegue" id="T9t-ax-eHM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BP7-7T-Apx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="763"/>
+            <point key="canvasLocation" x="928.98550724637687" y="762.72321428571422"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="T9t-ax-eHM"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="moon.fill" catalog="system" width="128" height="121"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
