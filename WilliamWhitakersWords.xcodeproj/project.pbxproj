@@ -406,6 +406,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6UHBD8HT79;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WilliamWhitakersWords/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WilliamWhitakersWords;
@@ -435,6 +436,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6UHBD8HT79;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WilliamWhitakersWords/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WilliamWhitakersWords;
