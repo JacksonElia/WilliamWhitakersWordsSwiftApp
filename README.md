@@ -25,6 +25,9 @@ My own take at a William Whitakers Latin Translation app that utilizes some basi
 <img width="314" alt="Screen Shot 2022-08-02 at 8 24 26 PM" src="https://user-images.githubusercontent.com/85963782/182499435-2b3c6557-49c8-4f2f-9835-7eec1485ddcb.png">
 
 
+# Motivation
+I made this app because I am a Latin student and I was unsatisfied with the app made for William Whitaker's Words on IOS. Also, I saw it as a good opportunity for me to relearn Swift as I was very rusty.
+
+
 # Pods/Frameworks Used
 - [Swift Soup](https://github.com/scinfu/SwiftSoup)
-
