@@ -17,7 +17,7 @@ class InfoViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Hyperlinks the part of the textviews specified
-        hyperlinkTextView(textView: githubTextView, subText: "Github", link: "https://github.com/Traptricker")
+        hyperlinkTextView(textView: githubTextView, subText: "website", link: "https://jacksonelia.github.io/")
         hyperlinkTextView(textView: wwwTextView, subText: "William Whitaker's Words", link: "https://archives.nd.edu/words.html")
         // Turns nightmode on or off based on what the user selected
         if nightmodeOn {
